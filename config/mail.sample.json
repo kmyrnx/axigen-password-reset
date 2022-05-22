@@ -1,0 +1,25 @@
+{
+  "transport": {
+    "host": "SERVER_IP",
+    "secure": true,
+    "port": 587,
+    "tls": {
+      "serverName": "SERVER_NAME"
+    }
+  },
+  "addresses": {
+    "from": "reset@DOMAIN",
+    "to": [
+      "null@DOMAIN"
+    ],
+    "bcc": [
+      "RECIPIENT@DOMAIN"
+    ]
+  },
+  "imap": {
+    "host": "SERVER_IP",
+    "secure": true,
+    "port": 993,
+    "serverName": "SERVER_NAME"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "axigen-password-reset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --no-daemon"
+  },
+  "author": "Kamyar Nadimi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "imapflow": "^1.0.95",
+    "nodemailer": "^6.7.5",
+    "pm2": "^5.2.0",
+    "puppeteer": "^14.1.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}

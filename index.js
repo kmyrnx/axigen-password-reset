@@ -1,8 +1,9 @@
 require('dotenv').config();
 const { ImapFlow } = require('imapflow');
 const logger = require('./utils/logger');
-const config = require('./config/mail.json');
 const reset = require('./utils/reset');
+const validator = require('./utils/validator');
+const config = require('./config/mail.json');
 
 const { MAIL_USER, MAIL_PASS } = process.env;
 

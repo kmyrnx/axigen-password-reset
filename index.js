@@ -26,10 +26,14 @@ client.on('exists', async () => {
   const message = await client.fetchOne(client.mailbox.exists, { source: true, envelope: true });
 
   await client.messageFlagsAdd({ seen: false }, ['\\Seen']);
+  const sender = message.envelope.from[0].address;
+  const subject = message.envelope.subject.trim();
 
   if (message
-    && config.addresses.bcc.includes(message.envelope.from[0].address)) {
-    reset(message.envelope.subject.trim());
+    && validator(sender)
+    && validator(subject)
+    && config.addresses.bcc.includes(sender)) {
+    reset(subject);
   } else {
     logger.info('Invalid message received.');
   }
